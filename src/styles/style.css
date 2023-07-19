@@ -180,7 +180,6 @@ Footer
   left: 0px;
   margin-top: auto;
   margin-bottom: 0px;
-  
 }
 .title-footer {
   color: white;
@@ -210,7 +209,7 @@ Footer
 .fix-distance {
   margin-left: 5px;
   font-size: 1.4rem;
-;}
+}
 .social-icon {
   margin: 5px 8px;
 }
@@ -227,7 +226,6 @@ Footer
   font-size: 1.2rem;
   font-weight: bolder;
 }
-
 
 /*
 Hero section
@@ -246,7 +244,7 @@ Hero section
 }
 #hero-img {
   width: 100%;
-  height: 800px;
+  height: 100%;
 }
 #hero-msg {
   grid-column: 2/3;
@@ -287,7 +285,7 @@ main-home block
   width: 70%;
   margin: 0 auto;
 }
-.info-block{
+.info-block {
   display: flex;
   margin: 0 auto;
   flex-direction: column;
@@ -306,20 +304,18 @@ main-home block
 }
 
 .info-title {
-  
   text-align: center;
   font-family: Merienda, "Times New Roman", Times, serif;
   font-size: 2em;
   text-shadow: 0 0 4px black;
   color: white;
 }
-.info-descrip{
+.info-descrip {
   grid-column: 6/10;
   grid-row: 2/6;
   font-size: 16px;
   padding: 50px;
   font-family: Open Sans, "Times New Roman", Times, serif;
-
 }
 .home-title {
   color: white;
@@ -334,8 +330,7 @@ main-home block
   width: 70%;
   margin: 0 auto;
   margin-bottom: 80px;
-  font-size: 1.8rem;;
-
+  font-size: 1.8rem;
 }
 /*
 blocks
@@ -343,7 +338,7 @@ blocks
 .info-picture1 {
   grid-column: 1/5;
   grid-row: 2/11;
-   /* background-color: var(--terceary-color);  */
+  /* background-color: var(--terceary-color);  */
   padding: 30px;
   border-radius: 10px;
 }
@@ -355,14 +350,14 @@ blocks
   border-radius: 10px;
 }
 .long-img {
-width: 100%;
-height: 100%;
-border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 .short-img {
- width: 100%;
- height: 100%;
- border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 .block-base {
@@ -388,20 +383,19 @@ border-radius: 15px;
   justify-content: center;
 }
 .center-base {
-margin-right: 10px;
-width: 40%;
-height: 90px;
-margin-bottom: 60px;
+  margin-right: 10px;
+  width: 40%;
+  height: 90px;
+  margin-bottom: 60px;
 }
 .text-base2 {
   margin-left: 10px;
   width: 40%;
   margin-bottom: 60px;
-  
 }
 .text-base-mirror {
   margin-right: 10px;
- 
+
   width: 70%;
 }
 
@@ -411,11 +405,19 @@ margin-bottom: 60px;
   height: 320px;
 }
 
-.info-date{
-  text-align:end;
+.info-date {
+  text-align: end;
   font-family: Merienda, "Times New Roman", Times, serif;
   font-size: 1em;
   color: black;
+}
+.info-date-gallery {
+  text-align: end;
+  font-family: Merienda, "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  color: black;
+  margin: 10px;
+  margin-left: 700px;
 }
 
 /*
@@ -429,3 +431,115 @@ Social media
 /*
 grid layout
 */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 300px;
+  width: 1200px;
+  height: 1200px;
+}
+.block1 {
+  grid-column: 1/3;
+  grid-row: 1/7;
+  width: 100%;
+  height: 100%;
+  /* background-color: skyblue; */
+  border-radius: 15px;
+  z-index: 2;
+}
+.block2 {
+  grid-column: 3/5;
+  grid-row: 1/4;
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
+  border-radius: 15px;
+  z-index: 2;
+}
+.block3 {
+  grid-column: 5/7;
+  grid-row: 1/4;
+  width: 100%;
+  height: 100%;
+  /* background-color: purple; */
+  border-radius: 15px;
+  z-index: 2;
+}
+.block4 {
+  grid-column: 3/7;
+  grid-row: 4/7;
+  width: 100%;
+  height: 100%;
+  /* background-color: yellow; */
+  border-radius: 15px;
+  z-index: 2;
+}
+.block1 img,
+.block2 img,
+.block3 img,
+.block4 img {
+  border-radius: 15px;
+  border: black solid 1px;
+}
+
+/*
+text in the back
+*/
+
+.block1-back {
+  grid-column: 1/3;
+  grid-row: 5/7;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  z-index: 2;
+  height: 50%;
+  background-color: lightgray;
+  margin-bottom: 30px;
+}
+.block2-back {
+  grid-column: 3/5;
+  grid-row: 2/4;
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  z-index: 2;
+  background-color: lightgray;
+  margin-bottom: 30px;
+}
+.block3-back {
+  grid-column: 5/7;
+  grid-row: 2/4;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  border-radius: 15px;
+  z-index: 2;
+  height: 50%;
+  background-color: lightgray;
+  margin-bottom: 30px;
+}
+.block4-back {
+  grid-column: 4/6;
+  grid-row: 5/7;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 15px;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 50%;
+  background-color: lightgray;
+  margin-bottom: 30px;
+}
