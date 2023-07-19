@@ -16,10 +16,10 @@ document.querySelector("#footer").innerHTML = `
     <div class="social-media">
         <h2 class="title-footer">Copyright 2023 El Kevin Viaja</h2>
         <div>
-            <a target="_blank" ><img class="social-icon" src="${instagramLogo}" alt="instagram" width="50" height="50"></a>
+            <a target="_blank" href="https://www.instagram.com/kevinmorales.ceo/" ><img class="social-icon" src="${instagramLogo}" alt="instagram" width="50" height="50"></a>
             <a target="_blank" href="https://www.tiktok.com/@elkevin.viaja" ><img class="social-icon" src="${tiktokLogo}" alt="tiktok" width="50" height="50"></a>
             <a target="_blank" ><img class="social-icon" src="${youtubeLogo}" alt="youtube" width="50" height="50"></a>
-            <a target="_blank" ><img class="social-icon" src="${facebookLogo}" alt="facebook" width="50" height="50"></a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=1096023994" ><img class="social-icon" src="${facebookLogo}" alt="facebook" width="50" height="50"></a>
         </div>
     </div>
     <div class="btn-support-block">
