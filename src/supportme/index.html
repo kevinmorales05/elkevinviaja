@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support me</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="nav"></div>
+      <div id="hero">
+        <div id="hero-box">
+          <img
+            id="hero-img"
+            src="../../assets/images/kyotoviaja.jpeg"
+            alt="Kyoto at the sunset"
+          />
+        </div>
+        <section id="hero-msg">
+          <h1 class="home-title">Support me</h1>
+          <h4 class="home-subtitle">For more free content</h4>
+          <div class="button-box">
+            <a
+              class="book"
+              href="/src/pages/SupportMe/supportme.html"
+              target="_blank"
+              >Support me</a
+            >
+          </div>
+        </section>
+      </div>
+      <div class="info-block">
+        <h2 class="info-title">Thank you for support me</h2>
+
+        <div class="block-base">
+          <div class="img-base">
+            <img
+              class="short-img"
+              src="../../assets/images/kyotoviaja.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="text-base">
+            <h2 class="info-title">Please fill and send the form</h2>
+
+            <br />
+            <p>
+              Life Idiomas is a Ecuadorian cultural and travel company that
+              helps people to be merged into Asian culture through exploration
+              and tourism founded by young people that understands the actual
+              needs of the travelers that do not just want luxury but real
+              cultural immersion and saving money.
+            </p>
+            <form id="form">
+              <p>Send this information and we are going to contact you.</p>
+              <hr />
+              <ul class="questions-list">
+                <li class="question">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="user_name" />
+                </li>
+                <li class="question">
+                  <label for="mail">Email:</label>
+                  <input type="email" id="mail" name="user_mail" />
+                </li>
+                <li class="question">
+                  <label for="donation">Donation:</label>
+                  <input type="number" id="donation" name="donation" />
+                </li>
+                <li class="question">
+                  <fieldset>
+                    <legend>Type of donation</legend>
+                    <label>
+                      <input type="radio" name="sponsor" value="1" /> Sponsor
+                    </label>
+                    <label>
+                      <input type="radio" name="brand" value="2" /> Brand
+                      Sponsor
+                    </label>
+                    <label>
+                      <input type="radio" name="normal" value="3" /> Normal
+                      Donation
+                    </label>
+                  </fieldset>
+                </li>
+                <li class="question">
+                  <button id="btn-send" type="submit">Send form</button>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+    <script type="module" src="../components/menu.js"></script>
+    <script type="module" src="../components/footer.js"></script>
+    <script>
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evita que el formulario realice su acción predeterminada (recargar la página)
+
+          const formData = new FormData(); // Crea un objeto FormData para enviar los datos del formulario
+          formData.append("name", document.getElementById("name").value);
+          formData.append("mail", document.getElementById("mail").value);
+          formData.append(
+            "donation",
+            document.getElementById("donation").value
+          );
+          alert(document.getElementById("name").value);
+
+          const apiURL = "http://localhost:1337/api/donations";
+          const strapi_token =
+            "9b6b503059cfda8fe1b256810c3d75273afb5cbf5689920c3b70dd0e67fc549decb30c62fc3c09f408edabda6bad462c9af082cd01a1b252614f8b1c435c5bec11e698e384905877b9972224b61d5c5beb613f4d23e058839c2d8986414b03814fc3852768c10861d6cdb4218565929ce2502399385cf10d72c64406172b73ef";
+
+          let obj_constructed = {
+            data: {
+              email: document.getElementById("mail").value,
+              donor_name: document.getElementById("name").value,
+              reason: "sponsor",
+              donation: document.getElementById("donation").value,
+            },
+          };
+          try {
+            fetch(apiURL, {
+              method: "POST",
+              body: JSON.stringify(obj_constructed),
+              headers: {
+                "Content-Type": "application/json",
+                Auhorization: `Bearer ${strapi_token}`,
+              },
+            })
+              .then((res) => res.json())
+              .catch((error) => console.error("Error:", error))
+              .then((response) => alert("Thank you for your donation!"));
+          } catch (error) {
+            alert("error", error);
+          }
+        });
+    </script>
+  </body>
+</html>

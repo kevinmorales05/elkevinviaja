@@ -8,9 +8,9 @@ document.querySelector("#footer").innerHTML = `
   <div class="main-footer">
     <nav class="nav-footer">
       <ul class="button-list-footer">
-        <li><a class="btn-navigation-footer" href="/src/pages/Blog/blog.html" >My Blog</a></li>
-        <li><a class="btn-navigation-footer" href="/src/pages/Gallery/gallery.html" >Gallery</a></li>
-        <li><a class="btn-navigation-footer" href="/src/pages/SocialNetworks/social.html" >My Channel</a></li>
+        <li><a class="btn-navigation-footer" href="blog/index.html" >My Blog</a></li>
+        <li><a class="btn-navigation-footer" href="gallery/index.html" >Gallery</a></li>
+        <li><a class="btn-navigation-footer" href="socialnetworks/index.html" >My Channel</a></li>
       </ul>
     </nav>
     <div class="social-media">
@@ -29,5 +29,3 @@ document.querySelector("#footer").innerHTML = `
 
   </div>
 `;
-
-setupCounter(document.querySelector("#counter"));
