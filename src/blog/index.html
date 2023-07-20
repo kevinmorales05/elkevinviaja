@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Kevin Viaja</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
     <div id="app">
@@ -16,7 +16,7 @@
             id="hero-img"
             src="../../assets/images/kyotoviaja.jpeg"
             alt="Kyoto at the sunset"
-          >
+          />
         </div>
         <section id="hero-msg">
           <h1 class="home-title">My amazing blog</h1>
@@ -24,18 +24,27 @@
             Telling stories of people where ever I go
           </h4>
           <div class="button-box">
-            <a class="book" href="/src/pages/SupportMe/supportme.html" target="_blank">Support me</a>
+            <a
+              class="book"
+              href="/src/pages/SupportMe/supportme.html"
+              target="_blank"
+              >Support me</a
+            >
           </div>
         </section>
       </div>
       <main class="content-home">
         <div class="info-block">
-            <p class="info-date">March 19th 2023</p>
-            <h2 class="info-title">What about "El Kevin Viaja"?</h2>
-          
+          <p class="info-date">March 19th 2023</p>
+          <h2 class="info-title">What about "El Kevin Viaja"?</h2>
+
           <div class="block-base">
             <div class="img-base">
-              <img class="short-img" src="../../assets/images/kyotoviaja.jpeg" alt="" >
+              <img
+                class="short-img"
+                src="../../assets/images/kyotoviaja.jpeg"
+                alt=""
+              />
             </div>
             <div class="text-base">
               <p>
@@ -45,7 +54,7 @@
                 needs of the travelers that do not just want luxury but real
                 cultural immersion and saving money.
               </p>
-              <br>
+              <br />
               <p>
                 Life Idiomas is a Ecuadorian cultural and travel company that
                 helps people to be merged into Asian culture through exploration
@@ -54,14 +63,12 @@
                 cultural immersion and saving money.
               </p>
             </div>
-
           </div>
         </div>
         <div class="info-block">
           <h2 class="info-title">My mission</h2>
-          
+
           <div class="block-base">
-            
             <div class="text-base-mirror">
               <p>
                 Life Idiomas is a Ecuadorian cultural and travel company that
@@ -70,7 +77,7 @@
                 needs of the travelers that do not just want luxury but real
                 cultural immersion and saving money.
               </p>
-              <br>
+              <br />
               <p>
                 Life Idiomas is a Ecuadorian cultural and travel company that
                 helps people to be merged into Asian culture through exploration
@@ -80,15 +87,16 @@
               </p>
             </div>
             <div class="img-base-mirror">
-                <img class="short-img" src="../../assets/images/kyotoviaja.jpeg" alt="" >
-              </div>
-
+              <img
+                class="short-img"
+                src="../../assets/images/kyotoviaja.jpeg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-        
+
         <div class="info-block">
-         
-          
           <div class="block-base">
             <div class="center-base">
               <h2 class="text-center">Support me</h2>
@@ -101,16 +109,97 @@
                 needs of the travelers that do not just want luxury but real
                 cultural immersion and saving money.
               </p>
-              <br>
-             
+              <br />
             </div>
-
           </div>
         </div>
       </main>
-      <div id="footer"> </div>
-    </div> 
+      <div id="footer"></div>
+    </div>
     <script type="module" src="../components/menu.js"></script>
     <script type="module" src="../components/footer.js"></script>
+    <script>
+      function getBlog() {
+        //event.preventDefault(); // Evita que el formulario realice su acción predeterminada (recargar la página)
+
+        alert("Consultado blogs");
+
+        const apiURL = "http://localhost:1337/api/blog-entries?populate=*";
+        const strapi_token =
+          "9b6b503059cfda8fe1b256810c3d75273afb5cbf5689920c3b70dd0e67fc549decb30c62fc3c09f408edabda6bad462c9af082cd01a1b252614f8b1c435c5bec11e698e384905877b9972224b61d5c5beb613f4d23e058839c2d8986414b03814fc3852768c10861d6cdb4218565929ce2502399385cf10d72c64406172b73ef";
+
+        try {
+          fetch(apiURL, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Auhorization: `Bearer ${strapi_token}`,
+            },
+          })
+            .then((res) => res.json())
+            .catch((error) => console.error("Error:", error))
+            .then((response) => {
+              alert("Succesfully updated ");
+
+              console.log("datos retornados ", response);
+              console.log("datos retornados data", response.data);
+              createBlogs(response.data);
+            });
+        } catch (error) {
+          alert("error", error);
+        }
+      }
+      function createBlogs(data) {
+        console.log("desde create blog ", data[0]);
+        const mainBlogs = document.querySelector(".content-home");
+        if (data) {
+          //mainBlogs.removeChild();
+          for (let i = 0; i < data.length; i++) {
+            console.log('iterating the array')
+            //create elements and give it style
+            let newDiv = document.createElement("div");
+            newDiv.className = "info-block";
+            let date = document.createElement("p");
+            date.className = "info-date";
+            let title = document.createElement("h2");
+            title.className = "info-title";
+            //add value to date and title
+            date.innerHTML =data[i].attributes.date ;
+            title.innerHTML = data[i].attributes.title ;
+            //add date and title
+            newDiv.appendChild(date);
+            newDiv.appendChild(title);
+            
+            for(let j=0; j < data[i].attributes.entries.data.length; j++ ){
+
+              let blockbase = document.createElement("div");
+            blockbase.className='block-base';
+            let imgbase = document.createElement("div");
+            imgbase.className='img-base';
+            let shortImg = document.createElement("img");
+            shortImg.className='short-img';
+            let textbase = document.createElement("div");
+            textbase.className='text-base';
+            let text = document.createElement("p");
+              //add text
+            text.innerHTML = data[i].attributes.entries.data[0].attributes.bio;
+            // add images
+            shortImg.src = data[i].attributes.entries.data[0].attributes.img;
+            //add to structures
+            textbase.appendChild(text);
+            imgbase.appendChild(shortImg);
+            blockbase.appendChild(imgbase);
+            blockbase.appendChild(textbase);
+            newDiv.appendChild(blockbase)
+            }
+            
+            //it is added to the main block
+            mainBlogs.appendChild(newDiv);
+            console.log("successfully created a new blog");
+          }
+        }
+      }
+      getBlog();
+    </script>
   </body>
 </html>
