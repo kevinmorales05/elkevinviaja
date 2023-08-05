@@ -569,3 +569,213 @@ Form
   color: white;
   font-size: 1.5rem;
 }
+/*
+Nav Button
+*/
+.nav-button {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  display: none;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+}
+.nav-button img {
+  height: 40px;
+  width: 40px;
+}
+
+/*
+Responsive Design 
+*/
+/* Small devices (phones up to 500 px) */
+@media only screen and (max-width: 400px) {
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .main-menu {
+    flex-direction: column;
+  }
+  .button-list {
+    flex-direction: column;
+  }
+  .navigation {
+    display: none;
+  }
+  #close {
+    display: none;
+  }
+  #open {
+    display: flex;
+  }
+  .title {
+    width: 90%;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  /*
+  Footer responsivo
+  */
+  .main-footer {
+    background-color: skyblue;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .title-footer {
+    color: white;
+    font-size: 1.0rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+  .social-media {
+    margin: 10px 30px;
+  }
+  .btn-support-block {
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-support {
+    
+    margin-left: 0px;
+    font-size: 1.8rem;
+  }
+  .fix-distance {
+    margin-left: 5px;
+    font-size: 1.4rem;
+  }
+  .social-icon {
+    margin: 5px 8px;
+  }
+  
+  .nav-footer {
+    margin: 10px 60px;
+  }
+  .button-list-footer {
+    list-style: none;
+  }
+  .btn-navigation-footer {
+    margin: 15px;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+
+
+
+}
+
+/* Small devices (phones up to 500 px) */
+@media only screen and (max-width: 500px) {
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .main-menu {
+    flex-direction: column;
+  }
+  .button-list {
+    flex-direction: column;
+  }
+  .navigation {
+    display: none;
+  }
+  #close {
+    display: none;
+  }
+  #open {
+    display: flex;
+    background-color: white;
+  }
+  .title {
+    width: 90%;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+   /*
+  Footer responsivo
+  */
+  .main-footer {
+    background-color: skyblue;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .title-footer {
+    color: white;
+    font-size: 1.0rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  
+  .social-media {
+    margin: 10px 30px;
+  }
+  .btn-support-block {
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-support {
+    
+    margin-left: 0px;
+    font-size: 1.8rem;
+  }
+  .fix-distance {
+    margin-left: 5px;
+    font-size: 1.4rem;
+  }
+  .social-icon {
+    margin: 5px 8px;
+  }
+  
+  .nav-footer {
+    margin: 10px 60px;
+  }
+  .button-list-footer {
+    list-style: none;
+  }
+  .btn-navigation-footer {
+    margin: 15px;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}

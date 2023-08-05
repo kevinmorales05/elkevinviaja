@@ -201,5 +201,25 @@
       }
       getBlog();
     </script>
+    <script>
+      function openMenuOptions() {
+              console.log('Open');
+              let menu = document.querySelector(".navigation");
+              menu.style.display='block';
+              let closeMenuBTN = document.querySelector('#close');
+              closeMenuBTN.style.display='flex';
+              let openMenuBTN = document.querySelector('#open');
+              openMenuBTN.style.display='none';
+          }
+      function closeMenuOptions() {
+              console.log('Close');
+              let menu = document.querySelector(".navigation");
+              menu.style.display='none';
+              let closeMenuBTN = document.querySelector('#close');
+              closeMenuBTN.style.display='none';
+              let openMenuBTN = document.querySelector('#open');
+              openMenuBTN.style.display='flex';    
+          }
+    </script>
   </body>
 </html>

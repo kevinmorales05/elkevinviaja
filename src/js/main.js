@@ -1,5 +1,5 @@
-import { sendDonation } from './sendDonation.js'
-
+//import { sendDonation } from './sendDonation.js'
+import {openMenuOptions, closeMenuOptions} from './responsiveMenu.js'
 // document.querySelector('#app').innerHTML = `
 //   <div>
 //     <h1>Welcome Kevin!</h1>
@@ -12,4 +12,4 @@ import { sendDonation } from './sendDonation.js'
 //   </div>
 // `
 
-sendDonation(document.querySelector('#btn-send'));
+//sendDonation(document.querySelector('#btn-send'));
