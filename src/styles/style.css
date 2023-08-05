@@ -305,8 +305,7 @@ main-home block
 
 .info-title {
   text-align: center;
-  font-family: Merienda, "Times New Roman", Times, serif;
-  font-size: 2em;
+  font-size: 3em;
   text-shadow: 0 0 4px black;
   color: white;
 }
@@ -319,8 +318,7 @@ main-home block
 }
 .home-title {
   color: white;
-  font-family: Merienda, "Times New Roman", Times, serif;
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   margin-top: 280px;
   text-shadow: 0 0 4px black;
 }

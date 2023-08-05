@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'GoodDog';
+    src:url('./fonts/GOODDP__.TTF')
+}
+h1, h2, h3, h4, p, a {
+    font-family: 'GoodDog';
+}
+h2 .info-title{
+    font-family: 'GoodDog';
+}
+.home-title {
+    font-family: 'GoodDog';
+}
