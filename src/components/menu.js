@@ -8,8 +8,8 @@ document.querySelector("#nav").innerHTML = `
       <img src="../assets/icons/menu.png" >
     </button>
     <button type="submit" id="close" onclick="closeMenuOptions()" class="nav-button">
-    <img src="../assets/icons/close.png" >
-  </button>
+      <img src="../assets/icons/close.png" >
+    </button>
     <nav class="navigation">
       <ul class="button-list">
         <li><a class="btn-navigation" href="/index.html" >Home</a></li>
