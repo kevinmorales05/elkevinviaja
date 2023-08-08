@@ -2,10 +2,10 @@
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #3b0d11;
-  --secondary-color: #6a3937;
-  --accent1-color: #706563;
-  --accent2-color: #748386;
+  --primary-color: #6b9080;
+  --secondary-color: #A4C3B2;
+  --accent1-color: #CCE3DE;
+  --accent2-color: #EAF4F4;
 
   /* change the values below to your chosen font(s) */
   --heading-font: "Sigmar", cursive, "Arial Black", Helvetica;
@@ -36,11 +36,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--secondary-color);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--secondary-color);
 }
 
 body {
@@ -70,10 +70,10 @@ h1 {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--secondary-color));
 }
 .logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  filter: drop-shadow(0 0 2em var(--secondary-color));
 }
 
 .card {
@@ -81,7 +81,7 @@ h1 {
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--accent2-color);
 }
 
 button {
@@ -96,7 +96,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--secondary-color);
 }
 button:focus,
 button:focus-visible {
@@ -109,10 +109,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    color: var(--secondary-color);
   }
 }
 /*
@@ -127,7 +124,7 @@ General configuration
 Menu
 */
 .main-menu {
-  background-color: skyblue;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: row;
   padding: 10px 90px;
@@ -164,23 +161,29 @@ Menu
 }
 .logo-nav {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  line-height: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+    justify-content: center;
+    align-content: center;
+    line-height: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .icon-logo{
   width: 30px;
   height: 30px;
-  margin-left: -45px;
+  margin-left: -10px;
+}
+#open {
+display: none;
+}
+#close {
+  display: none;
 }
 /* 
 Footer
 */
 
 .main-footer {
-  background-color: skyblue;
+  background-color: var(--primary-color);
   /* display: grid; */
   display: flex;
   flex-direction: row;
@@ -209,7 +212,7 @@ Footer
   justify-content: center;
 }
 .btn-support {
-  background-color: black;
+  background-color: var(--secondary-color);
   height: 40px;
   width: 200px;
   color: white;
@@ -281,7 +284,7 @@ Hero section
   text-decoration: none;
   padding: 15px 30px;
   margin-top: 50px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1.5rem;
 }
 .book:hover,
@@ -327,7 +330,6 @@ main-home block
   grid-row: 2/6;
   font-size: 16px;
   padding: 50px;
-  font-family: Open Sans, "Times New Roman", Times, serif;
 }
 .home-title {
   color: white;
@@ -512,7 +514,7 @@ text in the back
   border-radius: 15px;
   z-index: 2;
   height: 50%;
-  background-color: lightgray;
+  background-color: var(--accent1-color);
   margin-bottom: 30px;
 }
 .block2-back {
@@ -524,7 +526,7 @@ text in the back
   padding: 10px;
   border-radius: 15px;
   z-index: 2;
-  background-color: lightgray;
+  background-color: var(--accent1-color);
   margin-bottom: 30px;
 }
 .block3-back {
@@ -538,7 +540,7 @@ text in the back
   border-radius: 15px;
   z-index: 2;
   height: 50%;
-  background-color: lightgray;
+  background-color: var(--accent1-color);
   margin-bottom: 30px;
 }
 .block4-back {
@@ -554,7 +556,7 @@ text in the back
   align-items: center;
   align-content: center;
   height: 50%;
-  background-color: lightgray;
+  background-color: var(--accent1-color);
   margin-bottom: 30px;
 }
 
@@ -579,7 +581,7 @@ Form
   margin: 10px;
 }
 #btn-send {
-  background-color: lightgray;
+  background-color: var(--primary-color);
   color: white;
   font-size: 1.5rem;
 }
@@ -602,7 +604,7 @@ Nav Button
 /*
 Responsive Design 
 */
-/* Small devices (phones up to 500 px) */
+/* Small devices (phones up to 400 px) */
 @media only screen and (max-width: 400px) {
   #app {
     max-width: 1280px;
@@ -638,7 +640,7 @@ Responsive Design
   Footer responsivo
   */
   .main-footer {
-    background-color: skyblue;
+    background-color: var(--primary-color);
     /* display: grid; */
     display: flex;
     flex-direction: column;
@@ -772,6 +774,22 @@ Gallery
     margin-bottom: 10px;
     margin-top: 10px;
   }
+  /*
+    logo design
+  */
+  .logo-nav {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    line-height: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .icon-logo{
+    width: 30px;
+    height: 30px;
+    margin-left: -45px;
+  }
 }
 
 /* Small devices (phones up to 500 px) */
@@ -813,7 +831,7 @@ Gallery
   Footer responsivo
   */
   .main-footer {
-    background-color: skyblue;
+    background-color: var(--primary-color);
     /* display: grid; */
     display: flex;
     flex-direction: column;
@@ -890,8 +908,20 @@ Social networks
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #open {
+    display: none;
+    }
+    #close {
+      display: none;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  #open {
+    display: none;
+    }
+    #close {
+      display: none;
+    }
 }
