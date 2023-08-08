@@ -162,6 +162,19 @@ Menu
   margin-right: 20px;
   font-weight: bolder;
 }
+.logo-nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  line-height: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.icon-logo{
+  width: 30px;
+  height: 30px;
+  margin-left: -45px;
+}
 /* 
 Footer
 */
@@ -439,6 +452,9 @@ grid layout
   width: 1200px;
   height: 1200px;
 }
+.grid-layout-mobile {
+  display: none;
+}
 .block1 {
   grid-column: 1/3;
   grid-row: 1/7;
@@ -630,11 +646,11 @@ Responsive Design
   }
   .title-footer {
     color: white;
-    font-size: 1.0rem;
+    font-size: 1rem;
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  
+
   .social-media {
     margin: 10px 30px;
   }
@@ -644,7 +660,6 @@ Responsive Design
     justify-content: center;
   }
   .btn-support {
-    
     margin-left: 0px;
     font-size: 1.8rem;
   }
@@ -655,7 +670,7 @@ Responsive Design
   .social-icon {
     margin: 5px 8px;
   }
-  
+
   .nav-footer {
     margin: 10px 60px;
   }
@@ -669,59 +684,94 @@ Responsive Design
     font-size: 1.2rem;
     font-weight: bolder;
   }
-/*
+  /*
 Social network
 */
-.block-base {
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-.text-base {
-  margin-left: 20px;
-  width: 90%;
-}
-.img-base {
-  margin-right: 0 auto;
-  width: 100%;
-  height: 320px;
-  margin-bottom: 30px;
-
-}
-.img-base iframe {
-  width: 320px;
-  height: 250px;
-}
-.logo-big {
-  margin-bottom: 20px;
-}
-/*
+  .block-base {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .text-base {
+    margin-left: 20px;
+    width: 90%;
+  }
+  .img-base {
+    margin-right: 0 auto;
+    width: 100%;
+    height: 320px;
+    margin-bottom: 30px;
+  }
+  .img-base iframe {
+    width: 320px;
+    height: 250px;
+  }
+  .logo-big {
+    margin-bottom: 20px;
+  }
+  /*
 Home
 */
-.center-base {
-  width: 90%;
-}
-.text-base2 {
-  width: 80%;
-
-}
-.info-block {
-  margin-bottom: 0px;
-}
-/*
+  .center-base {
+    width: 90%;
+  }
+  .text-base2 {
+    width: 80%;
+  }
+  .info-block {
+    margin-bottom: 0px;
+  }
+  /*
 My blog
 */
-.info-date {
-  margin-bottom: 20px;
-}
-.text-base-mirror {
-  margin-bottom: 30px;
-  width: 90%;
-}
-.img-base-mirror {
-  width: 95%;
-}
-
+  .info-date {
+    margin-bottom: 20px;
+  }
+  .text-base-mirror {
+    margin-bottom: 30px;
+    width: 90%;
+  }
+  .img-base-mirror {
+    width: 95%;
+  }
+  /*
+Gallery
+*/
+  .grid-layout {
+    display: none;
+  }
+  .grid-layout-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    height: fit-content;
+  }
+  .grid-layout-mobile .block1-back {
+    margin-top: 10px;
+    width: 95%;
+  }
+  .grid-layout-mobile .block2-back {
+    margin-top: 10px;
+    width: 95%;
+  }
+  .grid-layout-mobile .block3-back {
+    margin-top: 10px;
+    width: 95%;
+  }
+  .grid-layout-mobile .block4-back {
+    margin-top: 10px;
+    width: 95%;
+  }
+  .info-date-gallery{
+    margin: 0 auto;
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  .info-title{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 }
 
 /* Small devices (phones up to 500 px) */
@@ -759,7 +809,7 @@ My blog
     margin-top: 10px;
     margin-bottom: 10px;
   }
-   /*
+  /*
   Footer responsivo
   */
   .main-footer {
@@ -771,11 +821,11 @@ My blog
   }
   .title-footer {
     color: white;
-    font-size: 1.0rem;
+    font-size: 1rem;
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  
+
   .social-media {
     margin: 10px 30px;
   }
@@ -785,7 +835,6 @@ My blog
     justify-content: center;
   }
   .btn-support {
-    
     margin-left: 0px;
     font-size: 1.8rem;
   }
@@ -796,7 +845,7 @@ My blog
   .social-icon {
     margin: 5px 8px;
   }
-  
+
   .nav-footer {
     margin: 10px 60px;
   }
@@ -814,41 +863,35 @@ My blog
   Hero Section
   */
 
-#hero {
-  grid-template-columns: 1fr 6fr 1fr;
-  margin-top: -160px;  
-}
+  #hero {
+    grid-template-columns: 1fr 6fr 1fr;
+    margin-top: -160px;
+  }
 
-#hero-img {
-  height: 600px;
-}
-#hero-msg {
-  margin-top: -90px;
-}
+  #hero-img {
+    height: 600px;
+  }
+  #hero-msg {
+    margin-top: -90px;
+  }
 
-.book,
-.join {
-  margin-top: 50px;
-}
+  .book,
+  .join {
+    margin-top: 50px;
+  }
   /*
 Social networks
 */
-
-
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
- 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  
 }

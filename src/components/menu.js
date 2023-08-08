@@ -3,7 +3,10 @@ import { openMenuOptions, closeMenuOptions } from "../js/responsiveMenu";
 let name ="El Kevin Viaja"
 document.querySelector("#nav").innerHTML = `
   <div class="main-menu">
+  <div class="logo-nav">
     <h2 class="title"> ${name}</h2>
+    <img class="icon-logo" src="../assets/icons/worldwide.png" >
+  </div>  
     <button type="submit" id="open" onclick="openMenuOptions()" class="nav-button">
       <img src="../assets/icons/menu.png" >
     </button>
